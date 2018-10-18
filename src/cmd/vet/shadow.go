@@ -41,7 +41,7 @@ var strictShadowing = flag.Bool("shadowstrict", false, "whether to be strict abo
 
 func init() {
 	register("shadow",
-		"check for shadowed variables",
+		"check for shadowed variables (experimental; must be set explicitly)",
 		checkShadow,
 		assignStmt, genDecl)
 	experimental["shadow"] = true
