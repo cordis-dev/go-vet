@@ -20,7 +20,7 @@ var (
 
 func badfLine(f *File, line int, format string, args ...interface{}) {
 	msg := fmt.Sprintf(format, args...)
-	fmt.Fprintf(os.Stderr, "%s:%d:buildtags: %s\n", f.name, line, msg)
+	fmt.Fprintf(os.Stderr, "%s:%d:buildtags:check that +build tags are valid: %s\n", f.name, line, msg)
 	setExit(1)
 }
 
